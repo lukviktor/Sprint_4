@@ -14,18 +14,20 @@ public class TestBase {
         //Меняем на нужный драйвер
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        /*
+
+       /*
          WebDriverManager.edgedriver().setup();
          driver = new EdgeDriver();
         */
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://qa-scooter.praktikum-services.ru/");
     }
     @After
     public void tearDown(){
-
+        driver.close();
         driver.quit();
     }
 }

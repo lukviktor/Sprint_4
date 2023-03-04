@@ -1,11 +1,11 @@
-package scootertests.PageObject;
+package PageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 public class MainOrderPage {
     private final WebDriver driver;
@@ -17,8 +17,10 @@ public class MainOrderPage {
 
     private final By nameBox = By.xpath("//*[@id='root']/div/div[2]/div[2]/div[1]/input");
     // Поле имя
+
     private final By lastNameField = By.xpath("//input[@class='Input_Input__1iN_Z Input_Responsible__1jDKN']");
     // Поле фамилия
+
     private final By addressField = By.xpath("//*[@id='root']/div/div[2]/div[2]/div[3]/input");
 
 
@@ -82,17 +84,14 @@ public class MainOrderPage {
         driver.findElement(btnPlaceAnOrder).click();
     }
 
-    public boolean checkHeaderOrderBeenPlaced() throws InterruptedException { // Проверка на Заказ оформлен?
-        TimeUnit.SECONDS.sleep(2);
+    public boolean checkHeaderOrderBeenPlaced() { // Проверка на Заказ оформлен?
 
         return driver.findElement(headerOrderBeenPlaced).isDisplayed();
         //Проверить, что появилось всплывающее окно с сообщением об успешном создании заказа.
-
     }
 
-    public void clickBtnStatusOrder() throws InterruptedException { // Метод нажатия на кнопку заказать верхняя
+    public void clickBtnStatusOrder() { // Метод нажатия на кнопку заказать верхняя
 
-        TimeUnit.SECONDS.sleep(1);
         driver.findElement(btnStatusOrder).click();
     }
 

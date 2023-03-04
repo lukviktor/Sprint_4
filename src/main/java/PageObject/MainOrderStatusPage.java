@@ -1,4 +1,4 @@
-package scootertests.PageObject;
+package PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 public class MainOrderStatusPage {
@@ -12,6 +12,7 @@ public class MainOrderStatusPage {
 
     private final By btnOrderCancellation = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM Button_Inverted__3IF-i']");
     // Кнопка отменить заказ
+
     private final By btnСancel = By.xpath("//*[@id='root']/div/div[2]/div[4]/div[2]/button[2]");
     //Кнопка отменить
 
