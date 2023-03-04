@@ -1,8 +1,10 @@
-package scootertests.PageObject;
+package PageObject;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 public class MainPage {
     WebDriver driver;
 
@@ -35,7 +37,6 @@ public class MainPage {
 
     public void clickBtnOrderUp() { // Метод нажатия на кнопку заказать верхняя
         driver.findElement(btnOrderUp).click();
-
     }
 
     public void clickBtnOrderLow() { // Метод нажатия на кнопку заказать нижняя
@@ -46,17 +47,10 @@ public class MainPage {
     public void clickBtnOrderHomelogoScooter() { // Метод нажатия на кнопку заказать верхняя
         driver.findElement(btnOrderHome).click();
         driver.findElement(logoScooter).click();
-
     }
     public boolean checkHomeHeader() { // Проверка присутствует ли хэдер на странице или мы находимся на главной странице
 
         return driver.findElement(homeHeader).isDisplayed();
         //Проверить, что появилось всплывающее окно с сообщением об успешном создании заказа.
-
     }
 }
-
-
-
-
-
